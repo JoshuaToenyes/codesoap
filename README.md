@@ -1,6 +1,6 @@
-# Casper
+# Code+Soap
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/).
+Adapted from the default theme for [Ghost](http://github.com/tryghost/ghost/).
 
 ## Copyright & License
 

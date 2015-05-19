@@ -1,4 +1,11 @@
 {
   "name": "CodeSoap",
-  "version": "1.0"
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "0.4.x",
+    "grunt-contrib-watch": "0.6.x",
+    "grunt-contrib-sass": "0.8.x",
+    "grunt-contrib-coffee": "0.11.x",
+    "grunt-coffeelint": "0.0.13"
+  }
 }

@@ -1,0 +1,446 @@
+@charset 'UTF-8'
+
+// Styles Reset
+@import 'meyer-reset/meyer-reset'
+
+// Utilities and Libraries
+@import 'bourbon/bourbon'
+@import 'neat/neat'
+@import 'base/base'
+
+$headingFontStack: "fira-sans-2", sans-serif
+$paragraphFontStack: "merriweather", serif
+
+$hoverColor: #931B22
+$borderColor: #EBF2F6
+
+
+body
+  font-family: $paragraphFontStack
+  font-size: 18px
+
+  & > main, & > header, & > footer
+    +span-columns(12)
+
+#wrapper
+  padding: 0 1em
+  +outer-container(600px)
+
+
+.container
+  +span-columns(12)
+
+
+article
+  padding: modular-scale(3) 0
+
+
+
+.site-head
+  text-align: center
+
+.site-head-content
+  margin-bottom: modular-scale(6)
+
+  h1.blog-title
+    margin-left: -9999px
+    position: absolute
+
+  .blog-logo
+
+    &, &:hover
+      border: none !important
+
+    img
+      width: 50%
+      max-width: 260px
+      margin: modular-scale(4) 0
+
+.author-image
+  height: 400px
+  width: 100%
+  position: relative
+  margin-bottom: modular-scale(3)
+
+  a
+    height: 100%
+    width: 100%
+    display: block
+    background-size: 100% auto
+    background-position: center center
+
+
+a, p a
+  color: $hoverColor
+  background: transparent
+  +transition(all 350ms)
+  border-bottom: 6px solid transparent
+
+  &:hover
+    color: $hoverColor
+    border-bottom: 6px solid #F5F2F0
+
+
+
+h1, h2, h3, h4, h5, h6
+  font-family: $headingFontStack
+  font-weight: 400
+  margin: 0
+  margin-top: modular-scale(1)
+  padding-bottom: modular-scale(-3)
+
+  a
+    color: black
+    border: none !important
+
+    &:hover
+      color: $hoverColor
+
+
+
+h1
+  font-size: 2.3em
+  margin-top: modular-scale(-3)
+
+
+h2
+  font-size: 2em
+
+  &.blog-description
+    background-color: #fafafa
+    border-top: 1px solid $borderColor
+    border-bottom: 1px solid $borderColor
+    font-family: $paragraphFontStack
+    font-style: italic
+    font-size: 0.8em
+    color: #444
+    padding: modular-scale(1)
+
+
+h3
+  font-size: 1.9em
+
+
+
+h4
+  font-size: 1.7em
+
+
+
+h5, h6
+  font-size: 1.5em
+
+.post-meta
+  font-size: 0.8em
+
+
+.post-template
+
+  .site-head-content
+    margin-bottom: 0
+
+  +media(min-width 960px)
+
+    .site-head
+      //+transform(rotate(-45deg))
+      text-align: left
+      position: absolute
+      left: 30px
+      top: 10px
+      width: 200px
+      height: 200px
+      overflow: hidden
+      //padding-left: modular-scale(1)
+
+    article
+      margin-top: 30px
+
+  .site-head h2
+    display: none
+
+  .post-meta
+    padding: modular-scale(1) 0
+    margin: modular-scale(1) 0
+    //text-align: center
+    border-top: 1px solid $borderColor
+    border-bottom: 1px solid $borderColor
+
+  article
+    padding-top: 0
+
+  header .site-head-content
+    padding: modular-scale(2) 0
+    .blog-logo img
+      margin: 0
+      width: 160px
+
+.post-header
+  margin-bottom: modular-scale(1)
+
+
+.post-content
+
+  h2, h3
+    border-top: 1px solid $borderColor
+    padding-top: modular-scale(1)
+
+  p
+    margin-bottom: modular-scale(2) 0
+
+  ol, ul, p
+    line-height: modular-scale(2)
+
+  ol, ul
+    padding: modular-scale(2) 0
+    margin: modular-scale(2) 0
+
+  ul
+    list-style-type: disc
+
+  ol
+    list-style-type: decimal-leading-zero
+
+  ol, ul, p
+    img
+      margin: modular-scale(2) auto
+      display: block
+
+
+blockquote
+  border-left: 8px solid $borderColor
+  padding-left: 1em
+  font-style: italic
+  margin: modular-scale(2) 0
+
+
+
+nav.pagination
+  padding: modular-scale(3) 0
+
+
+span.by, .fancy
+  font-weight: lighter
+  font-style: italic
+  font-family: serif
+
+
+.post-footer
+  font-size: 0.7em
+
+  .author-share
+    padding: modular-scale(2) 0
+    margin: modular-scale(3) 0
+    border-top: 1px solid $borderColor
+    border-bottom: 1px solid $borderColor
+
+    h4
+      margin-top: 0
+
+  .fancy
+    font-size: 1.5em
+
+.author-meta
+  padding: 0
+  margin: 0
+  list-style: none
+  line-height: 1
+  font-style: italic
+  color: #9EABB3
+
+
+.author-meta li
+  float: left
+  margin-left: 10px
+
+.author-meta li:before
+  content: "•"
+  display: inline-block
+  margin-right: 10px
+  color: #BBC7CC
+
+.author-meta li:first-child
+  margin-left: 0
+  &:before
+    content: none
+
+.clearfix
+  +clearfix
+
+.hidden
+  display: none
+
+.disqus
+  margin: modular-scale(4) 0
+
+
+.author
+  +span-columns(8)
+  p
+    padding: 0.3em 0 modular-scale(1)
+
+.share
+  +span-columns(4)
+  text-align: right
+  a, a:hover
+    color: black
+    font-size: 2em
+    border: none
+    padding-left: 10px
+    padding-right: 2px
+
+
+footer.site-footer
+  position: relative
+  padding-top: modular-scale(3)
+  padding-bottom: modular-scale(3)
+  text-align: center
+  border-top: 1px solid $borderColor
+  font-size: 0.7em
+  clear: both
+
+  .inner
+    opacity: 0.8
+
+
+
+code, tt
+  padding: 1px 3px
+  font-family: Inconsolata, monospace, sans-serif
+  font-size: 0.85em
+  white-space: pre-wrap
+  border: 1px solid #E3EDF3
+  background: #F7FAFB
+  border-radius: 2px
+
+
+
+pre
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  margin: 1.6em 0
+  border: 1px solid #E3EDF3
+  width: 100%
+  padding: 10px
+  font-family: Inconsolata, monospace, sans-serif
+  font-size: 0.9em
+  white-space: pre
+  overflow: auto
+  background: #F7FAFB
+  border-radius: 3px
+
+
+
+pre code, tt
+  font-size: 0.85em
+  white-space: -moz-pre-wrap
+  white-space: pre-wrap
+  background: transparent
+  border: none
+  padding: 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Import the font file with the icons in it */
+@font-face
+  font-family: 'icons'
+  src: url('../fonts/icons.eot')
+  src: url('../fonts/icons.eot?#iefix') format('embedded-opentype'), url('../fonts/icons.woff') format('woff'), url('../fonts/icons.ttf') format('truetype'), url('../fonts/icons.svg#icons') format('svg')
+  font-weight: normal
+  font-style: normal
+
+
+/* Apply these base styles to all icons */
+.icon-ghost:before,
+.icon-feed:before,
+.icon-twitter:before,
+.icon-google-plus:before,
+.icon-facebook:before
+  font-family: 'icons'
+  speak: none
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+  text-decoration: none
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+
+
+/* Each icon is created by inserting the corret character into the
+ content of the :before pseudo element. Like a boss. */
+.icon-ghost:before
+  content: "\e000"
+
+.icon-feed:before
+  content: "\e001"
+
+.icon-twitter:before
+  content: "\e002"
+  font-size: 1.1em
+
+.icon-google-plus:before
+  content: "\e003"
+
+.icon-facebook:before
+  content: "\e004"
+
+.subscribe
+  width: 28px
+  height: 28px
+  position: absolute
+  top: -14px
+  margin-left: -15px
+  border: 1px solid $borderColor
+  text-align: center
+  line-height: 2.4rem
+  border-radius: 50px
+  background: #fff
+  transition: box-shadow 0.5s
+
+
+/* The RSS icon, inserted via icon font */
+.subscribe:before
+  color: #D2DEE3
+  font-size: 10px
+  position: absolute
+  top: 9px
+  left: 9px
+  font-weight: bold
+  transition: color 0.5s ease
+
+
+/* Add a box shadow to on hover */
+.subscribe:hover
+  box-shadow: rgba(0,0,0,0.05) 0 0 0 3px
+  transition: box-shadow 0.25s
+
+
+.subscribe:hover:before
+  color: #50585D
+
+
+.rss
+  left: 50%
+  margin-left: -35px
+
+
+.twitter
+  left: 50%
+  margin-left: 5px
+
+  &:before
+    font-size: 16px
+    left: 6px
+    top: 6px

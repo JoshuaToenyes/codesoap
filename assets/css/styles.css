@@ -280,8 +280,9 @@ article {
     height: 100%;
     width: 100%;
     display: block;
-    background-size: 100% auto;
-    background-position: center center; }
+    background-size: auto 400px;
+    background-position: center center;
+    border-bottom: none !important; }
 
 a, p a {
   color: #931B22;
@@ -323,10 +324,10 @@ h2 {
     padding: 1.333em; }
 
 h3 {
-  font-size: 1.9em; }
+  font-size: 1.6em; }
 
 h4 {
-  font-size: 1.7em; }
+  font-size: 1.5em; }
 
 h5, h6 {
   font-size: 1.5em; }
@@ -365,7 +366,7 @@ h5, h6 {
 .post-header {
   margin-bottom: 1.333em; }
 
-.post-content h2, .post-content h3 {
+.post-content h2 {
   border-top: 1px solid #EBF2F6;
   padding-top: 1.333em; }
 .post-content p {
